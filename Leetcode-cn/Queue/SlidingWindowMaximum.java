@@ -11,6 +11,8 @@ import java.util.*;
  * 1. 用 Queue 模拟数组：时间复杂度 O(n^2), 空间复杂度 O(k)
  * 2. 双端队列：时间复杂度 O(n), 空间复杂度 O(k)
  *
+ * 栈和队列这种设计元素进出的，可能就和单调栈有关。
+ *
  * 五毒神掌：第二遍，第三遍时间 2021/3/8
  */
 public class SlidingWindowMaximum {
