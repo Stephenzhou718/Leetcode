@@ -16,7 +16,10 @@ import java.util.Stack;
  * 1. 递归
  * 2. 迭代
  *
- * 五毒神掌：第二遍，第三遍时间：2021/3/10
+ * 五毒神掌：
+ * 第二遍, 2021/3/9
+ * 第三遍, 2021/3/13
+ * 第四遍,
  */
 public class NAryTreePreorderTraversal {
 
