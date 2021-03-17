@@ -9,7 +9,12 @@ import java.util.List;
  * https://leetcode-cn.com/problems/subsets/
  *
  * 思路：
- * 1. 回溯：时间复杂度 O(n2)
+ * 1. 回溯：时间复杂度 O(2^n), 空间复杂度 O(n)
+ * 2. 牛顿迭代法（神奇的方法）
+ *
+ * 五毒神掌：
+ * 第二遍，2021/3/17
+ * 第三遍，
  */
 public class Subsets {
 
