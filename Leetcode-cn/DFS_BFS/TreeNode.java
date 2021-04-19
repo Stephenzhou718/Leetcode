@@ -1,0 +1,18 @@
+package DFS_BFS;
+
+/**
+ * @Author: zhouhanming
+ * @Date:2021/3/9 8:32 下午
+ */
+public class TreeNode {
+    int val;
+    TreeNode left;
+    TreeNode right;
+    TreeNode() {};
+    TreeNode(int val) {this.val = val;}
+    TreeNode(int val, TreeNode left, TreeNode right) {
+        this.val = val;
+        this.left = left;
+        this.right = right;
+    }
+}
