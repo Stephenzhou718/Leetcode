@@ -10,6 +10,10 @@ package UnionFind;
  * 2. BFS
  * 3. 并查集
  *
+ * 五毒神掌：
+ * 第二遍：2021/5/18
+ * 第三遍，2021/5/20
+ *
  */
 public class NumberOfIsland {
     public int numIslands(char[][] grid) {
@@ -25,13 +29,13 @@ public class NumberOfIsland {
             for (int j = 0; j < cols; j++) {
                 if (grid[i][j] == '1') {
                     grid[i][j] = '0';
-                    if (i - 1 > 0 && grid[i - 1][j] == '1') {
+                    if (i - 1 >= 0 && grid[i - 1][j] == '1') {
                         unionFind.union(i * cols + j, (i - 1) * cols + j);
                     }
                     if (i + 1 < rows && grid[i + 1][j] == '1') {
                         unionFind.union(i * cols + j, (i + 1) * cols + j);
                     }
-                    if (j - 1 > 0 && grid[i][j - 1] == '1') {
+                    if (j - 1 >= 0 && grid[i][j - 1] == '1') {
                         unionFind.union(i * cols + j, i * cols + j - 1);
                     }
                     if (j + 1 < cols && grid[i][j + 1] == '1') {

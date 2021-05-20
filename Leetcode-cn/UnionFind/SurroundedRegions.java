@@ -12,6 +12,7 @@ package UnionFind;
  *
  * 五毒神掌：
  * 第二遍，2021/5/19
+ * 第三遍, 2021/5/21
  */
 public class SurroundedRegions {
     public void solve(char[][] board) {
@@ -30,16 +31,16 @@ public class SurroundedRegions {
             for (int j = 0; j < n; j++) {
                 if (board[i][j] == 'O') {
                     if (i == 0 || i == m - 1|| j == 0 || j == n - 1) {
-                        // 便捷上的 O。把它和 dummuNode 合并成一个联通区域
+                        // 边界上的 O。把它和 dummuNode 合并成一个联通区域
                         unionFind.union(i * n + j, dummyNode);
                     } else {
-                        if (i > 0 && board[i - 1][j] == 'O') {
+                        if (i - 1 >= 0 && board[i - 1][j] == 'O') {
                             unionFind.union(i * n + j, (i - 1) * n + j);
                         }
                         if (i + 1 < m && board[i + 1][j] == 'O') {
                             unionFind.union(i * n + j, (i + 1) * n + j);
                         }
-                        if (j > 0 && board[i][j - 1] == 'O') {
+                        if (j - 1>= 0 && board[i][j - 1] == 'O') {
                             unionFind.union(i * n + j, i * n + j - 1);
                         }
                         if (j + 1 < n && board[i][j + 1] == 'O') {
