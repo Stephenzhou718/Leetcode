@@ -10,6 +10,7 @@ package AdvancedSearch.pruning;
  *
  * 五毒神掌：
  * 第二遍，2021/5/22
+ * 第三遍，2021/5/24
  */
 public class ValidSudoku {
     public boolean isValidSudoku(char[][] board) {
