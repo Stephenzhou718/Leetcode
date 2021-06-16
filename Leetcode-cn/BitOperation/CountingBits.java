@@ -6,10 +6,11 @@ package BitOperation;
  * https://leetcode-cn.com/problems/counting-bits/description/
  *
  * 思路：
- *
+ * n & (n -1) 消掉最低的 1， 计算 1 的数量的时候，时间复杂度为 logn
  *
  * 五毒神掌：
  * 第二遍：2021/5/26
+ * 第三遍：2021/6/16
  */
 public class CountingBits {
 

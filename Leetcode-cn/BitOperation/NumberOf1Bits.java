@@ -7,9 +7,11 @@ package BitOperation;
  *
  * 思路：
  * 1. 记住位元算的几个公式
+ * n & (n - 1) 消掉最低位的 1
  *
  * 五毒神掌：
  * 第二遍，2021/5/26
+ * 第三遍，2021/6/16
  */
 public class NumberOf1Bits {
     // 1. 使用公式 n & (n - 1) 去掉最低位的 1
