@@ -9,6 +9,7 @@ import java.util.Set;
  * @Author: zhouhanming
  * @Date:2021/5/18 10:11 下午
  * https://leetcode-cn.com/problems/word-search-ii/
+ * hard
  *
  * 思路：
  * 1. Trie + DFS
