@@ -2,6 +2,7 @@ package Sort;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Comparator;
 import java.util.List;
 
 /**
@@ -12,32 +13,33 @@ import java.util.List;
  * 五毒神掌：
  * 第二遍，2021/6/14
  * 第三遍，2021/6/15
+ * 第四遍，2021/6/21
  *
  */
 public class MergeIntervals {
     public int[][] merge(int[][] intervals) {
-        List<int[]> inter = Arrays.asList(intervals);
-        List<int[]> newInter = new ArrayList<>(inter);
-        newInter.sort((o1, o2) -> o1[0] - o2[0]);
+        if (intervals == null || intervals.length == 0 || intervals[0].length == 0) {
+            return new int[0][2];
+        }
+
+        Arrays.sort(intervals, new Comparator<int[]>() {
+            public int compare(int[] interval1, int[] interval2) {
+                return interval1[0] - interval2[0];
+            }
+        });
 
         List<int[]> res = new ArrayList<>();
-        for (int i = 0; i < newInter.size();) {
-            int t = newInter.get(i)[1];
+        for (int i = 0; i < intervals.length;) {
             int j = i + 1;
-            while (j < newInter.size() && newInter.get(j)[0] <= t) {
-                t = Math.max(t, newInter.get(j)[1]);
+            int t = intervals[i][1];
+            while (j < intervals.length && t >= intervals[j][0]) {
+                t = Math.max(t, intervals[j][1]);
                 j++;
             }
-            res.add(new int[]{newInter.get(i)[0], t});
+            res.add(new int[]{intervals[i][0], t});
             i = j;
         }
 
-        int[][] ans = new int[res.size()][2];
-        for (int i = 0; i < res.size(); i++) {
-            ans[i][0] = res.get(i)[0];
-            ans[i][1] = res.get(i)[1];
-        }
-
-        return ans;
+        return res.toArray(new int[res.size()][]);
     }
 }
