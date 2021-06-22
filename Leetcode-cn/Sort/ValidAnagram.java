@@ -13,6 +13,7 @@ import java.util.Arrays;
  * 五毒神掌：
  * 第二遍：2021/6/14
  * 第三遍：2021/6/15
+ * 第四遍：2021/6/21
  */
 public class ValidAnagram {
 
@@ -25,12 +26,19 @@ public class ValidAnagram {
             return false;
         }
 
-        char[] arr1 = s.toCharArray();
-        char[] arr2 = t.toCharArray();
+        int[] charCount = new int[26];
+        for (char ch : s.toCharArray()) {
+            charCount[ch - 'a']++;
+        }
+        for (char ch : t.toCharArray()) {
+            charCount[ch - 'a']--;
+        }
+        for (int num : charCount) {
+            if (num != 0) {
+                return false;
+            }
+        }
 
-        Arrays.sort(arr1);
-        Arrays.sort(arr2);
-
-        return Arrays.equals(arr1, arr2);
+        return true;
     }
 }

@@ -7,11 +7,13 @@ import java.util.List;
  * @Date:2021/4/28 8:46 下午
  * https://leetcode-cn.com/problems/triangle/
  *
- *  * 思路：
- *  * DP, 细心啊， md
- *  *
- *  * 五毒神掌：
- *  * 第二遍， 2021/4/28
+ * 思路：
+ * DP, 细心啊， md
+ *
+ * 五毒神掌：
+ * 第二遍，2021/4/28
+ * 第三遍，2021/6/22
+ *
  */
 public class Triangle {
 
